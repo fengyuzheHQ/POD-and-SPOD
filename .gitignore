@@ -1,7 +1,7 @@
 *.mp4
 *.bat
-__pycache__\
-media\
-.claude\
-.serena\
+__pycache__/
+media/
+.claude/
+.serena/
 CLAUDE.md
