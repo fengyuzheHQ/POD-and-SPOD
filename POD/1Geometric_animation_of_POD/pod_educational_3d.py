@@ -149,6 +149,7 @@ class PODEducational3D(ThreeDScene):
             GrowFromPoint(mode1_3d, mode1_3d.get_start()),
             Write(mode1_text)
         )
+        self.remove_fixed_in_frame_mobjects(energy_text)
         self.wait(1.5)
 
         # 显示正交平面
@@ -203,6 +204,7 @@ class PODEducational3D(ThreeDScene):
             GrowFromPoint(mode2_3d, mode2_3d.get_start()),
             Write(mode2_text)
         )
+        self.remove_fixed_in_frame_mobjects(plane_desc)
         self.wait(1)
 
         # Mode 3
@@ -244,10 +246,13 @@ class PODEducational3D(ThreeDScene):
         self.stop_ambient_camera_rotation()
 
         # 清理
+        cleanup_mobjects = [
+            dots_3d, axes_3d, mode1_3d, mode2_3d, mode3_3d,
+            title_3d, cloud_label, mode1_text, mode2_text,
+            mode3_desc, rotate_text
+        ]
         self.play(
-            *[FadeOut(mob) for mob in [
-                dots_3d, axes_3d, mode1_3d, mode2_3d, mode3_3d
-            ]],
+            *[FadeOut(mob) for mob in cleanup_mobjects],
             run_time=1.5
         )
         # 移除所有固定帧对象
