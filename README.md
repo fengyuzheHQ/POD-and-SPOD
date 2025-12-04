@@ -4,8 +4,8 @@
 
 ## 项目结构
 
--   `/POD/1_Geometric_animation_of_POD/`: 包含一个基于 Manim 的动画，用于可视化解释 POD 的核心概念。
--   `/POD/2_Mathematical_principles_of_POD/`: (规划中) 将包含深入的数学推导和代码实现。
+-   `/POD/1Geometric_animation_of_POD/`: 包含一个基于 Manim 的动画，用于可视化解释 POD 的核心概念。
+-   `/POD/2Mathematical_principles_of_POD/`: (规划中) 将包含深入的数学推导和代码实现。
 
 ## 快速开始：POD 动画
 
@@ -21,14 +21,14 @@
 
 2.  **安装依赖**
     ```bash
-    pip install manim numpy
+    pip install manim
     ```
 
 3.  **渲染动画**
     ```bash
-    python render_pod_split.py
+    python render_pod_split.py [ARGUMENTS]
     ```
-    更详细的说明，请参阅动画目录下的 `README_POD_Educational.md` 文件。
+    [ARGUMENTS] 具体更详细的说明，请参阅动画目录下的 `README_POD_Educational.md` 文件。
 
 ### 效果预览
 
@@ -36,7 +36,7 @@
 
 ## 未来计划
 
--   [ ] 完成 `2_Mathematical_principles_of_POD` 部分的内容。
+-   [ ] 完成 `2Mathematical_principles_of_POD` 部分的内容。
 -   [ ] 增加关于谱本征正交分解 (SPOD) 的内容。
 
 ## 贡献
